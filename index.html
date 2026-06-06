@@ -1,1 +1,182 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en" x-data="{mobileMenuOpen: false}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acharya Raja Sekhar – Software Architect Portfolio</title>
+  <!-- Tailwind CSS via CDN for rapid styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Alpine.js for lightweight interactivity -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Animate.css for wow factor animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-b0Zc0QdK5Hg+8gc1gZdwv7MdKgo7QzaSq9VHoVYnSjnHj8cQeKkYyOXznTja6XRcLKhFF9Zco6KkGk3JvYkQ3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- AOS animation library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+<body class="bg-slate-900 text-slate-200 font-sans leading-relaxed">
+  <!-- Navigation -->
+  <nav class="fixed w-full z-10 backdrop-blur bg-black/30 border-b border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="#" class="text-2xl font-bold text-blue-400">Acharya Raja Sekhar</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="#hero" class="hover:text-purple-400 transition">Home</a>
+        <a href="#about" class="hover:text-purple-400 transition">About</a>
+        <a href="#expertise" class="hover:text-purple-400 transition">Toolkit</a>
+        <a href="#experience" class="hover:text-purple-400 transition">Experience</a>
+        <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+      </div>
+      <!-- Mobile menu button -->
+      <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-slate-200 focus:outline-none">
+        <svg x-show="!mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg x-show="mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div x-show="mobileMenuOpen" class="md:hidden bg-black/70 border-t border-gray-700">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800">Home</a>
+        <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800">About</a>
+        <a href="#expertise" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800">Toolkit</a>
+        <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800">Experience</a>
+        <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="pt-32 md:pt-48 pb-20 bg-gradient-to-b from-slate-800 to-slate-950 text-center" data-aos="fade">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 break-words leading-snug text-center">
+        Designing Scalable Cloud Ecosystems
+      </h1>
+      <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300 mb-6">
+        11+ years of architecting end‑to‑end solutions for global e‑commerce, healthcare, and enterprise platforms.
+      </p>
+      <div class="flex justify-center space-x-4">
+        <a href="#experience" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-md transition">Experience</a>
+        <a href="#contact" class="px-6 py-3 bg-purple-500 hover:bg-purple-600 rounded-md transition">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-16 bg-slate-900" data-aos="fade">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-blue-400 mb-6">About Me</h2>
+      <p class="text-slate-300 mb-4">
+        Passionate Software developer and architect with a deep focus on cloud‑native, event‑driven, and micro‑service architectures. I thrive on turning complex business challenges into elegant, scalable solutions.
+      </p>
+      <p class="text-slate-300 mb-4">
+        My expertise spans Azure Solution Architecture, .NET ecosystem, container orchestration (Docker, AKS), and full‑stack development (MERN/MEAN). I champion design principles such as DDD, TDD, and clean architecture to deliver high‑quality, maintainable software.
+      </p>
+      <p class="text-slate-300">
+        I’m continually learning and sharing best practices, aiming to mentor teams and drive technical excellence across organizations.
+      </p>
+    </div>
+  </section>
+
+  <!-- Expertise / Toolkit -->
+  <section id="expertise" class="py-16 bg-slate-900" data-aos="fade">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Architect's Toolkit</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-slate-800 rounded-lg p-6 hover:shadow-xl transition-shadow">
+          <h3 class="text-xl font-semibold text-purple-300 mb-2">Architectural Patterns</h3>
+          <p class="text-slate-300">Domain‑Driven Design, Microservices, Event‑Driven, SOA, Cloud‑Native.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-6 hover:shadow-xl transition-shadow">
+          <h3 class="text-xl font-semibold text-purple-300 mb-2">Cloud & Infra</h3>
+          <p class="text-slate-300">Azure Architecture, AKS, Docker, NGINX, Redis, CI/CD pipelines.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-6 hover:shadow-xl transition-shadow">
+          <h3 class="text-xl font-semibold text-purple-300 mb-2">Backend Mastery</h3>
+          <p class="text-slate-300">.NET Core, C#, Web API, Entity Framework, SQL Server, Distributed Systems.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-6 hover:shadow-xl transition-shadow">
+          <h3 class="text-xl font-semibold text-purple-300 mb-2">Polyglot Stack</h3>
+          <p class="text-slate-300">MERN/MEAN, TypeScript, Python, Test‑Driven Development.</p>
+        </div>
+        <!-- Add additional cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline -->
+  <section id="experience" class="py-16 bg-slate-800" data-aos="fade">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Professional Journey</h2>
+      <div class="relative border-l-2 border-gray-600 ml-4">
+        <div class="mb-8 ml-6">
+          <div class="flex items-center mb-2">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-500 text-sm font-medium">1</span>
+            <h3 class="ml-4 text-xl font-semibold text-purple-300">Current – Software Architect</h3>
+          </div>
+          <p class="ml-12 text-slate-300">Designing scalable cloud ecosystems for global e‑commerce platforms, shaping technical roadmaps, and mentoring cross‑functional teams.</p>
+        </div>
+        <div class="mb-8 ml-6">
+          <div class="flex items-center mb-2">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-500 text-sm font-medium">2</span>
+            <h3 class="ml-4 text-xl font-semibold text-purple-300">Mid – Product Developer</h3>
+          </div>
+          <p class="ml-12 text-slate-300">Built high‑availability electronic patient record systems for large‑scale healthcare providers.</p>
+        </div>
+        <div class="mb-8 ml-6">
+          <div class="flex items-center mb-2">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-500 text-sm font-medium">3</span>
+            <h3 class="ml-4 text-xl font-semibold text-purple-300">Foundation – Senior Software Engineer</h3>
+          </div>
+          <p class="ml-12 text-slate-300">Focused on membership management services and deep .NET core development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="py-16 bg-slate-900" data-aos="fade">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Impact & Milestones</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="bg-slate-800 rounded-lg p-6">
+          <h3 class="text-xl font-semibold text-purple-300 mb-2">Progression</h3>
+          <p class="text-slate-300">Rapid ascent from Senior Engineer → Architect in under 4 years.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-6">
+          <h3 class="text-xl font-semibold text-purple-300 mb-2">Innovation</h3>
+          <p class="text-slate-300">Multiple hackathon wins and innovation awards for cloud‑native solutions.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-6">
+          <h3 class="text-xl font-semibold text-purple-300 mb-2">Leadership</h3>
+          <p class="text-slate-300">Led development squads and mentored junior engineers across continents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-slate-800 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl font-bold text-blue-400 mb-6">Get in Touch</h2>
+      <p class="text-slate-300 mb-8">
+        <a href="mailto:acharya.r@live.com" class="hover:underline text-purple-400">Email</a> |
+        <a href="https://www.linkedin.com/in/acharyarajasekhar" target="_blank" class="hover:underline text-purple-400">LinkedIn</a> |
+        <a href="https://github.com/acharyarajasekhar" target="_blank" class="hover:underline text-purple-400">GitHub</a>
+      </p>
+      <p class="text-slate-500">© 2026 Acharya Raja Sekhar – All rights reserved.</p>
+    </div>
+  </section>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  </script>
+</body>
+</html>
